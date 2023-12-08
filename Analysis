@@ -1,0 +1,32 @@
+(*Mini-Max Sum*)
+
+Time Complexity
+Sorting the array of integers takes O(n log n) time, where n is the number of elements in the list (arr).
+Calculating the minimum and maximum sums involves iterating through the sorted array, which is O(n).
+So, the overall time complexity is dominated by the sorting operation, which is O(n log n).
+
+Space Complexity
+The space complexity primarily involves the input list of integers (arr).
+Sorting algorithms like Java's Collections.sort() often use additional memory for their operations. 
+In Java, Collections.sort() typically uses O(log n) auxiliary space for recursion in most implementations.
+Therefore, the space complexity is mainly O(n) for the input list and O(log n) for the sorting operation 
+(though this is typically considered negligible compared to the input size when n is large).
+
+
+(*Weighted Uniform Strings*)
+
+Time Complexity
+Constructing the set of weights involves iterating through the characters of the input string s, 
+which takes O(n) time, where n is the length of the string.
+Handling each query involves checking if a weight exists in the set of weights, which has 
+an average time complexity of O(1) for a set lookup operation.
+As there are q queries to process, the overall time complexity for query handling becomes O(q).
+Therefore, the dominant time complexity is O(n + q), where n is the length of the input string, 
+and q is the number of queries.
+
+Space Complexity
+The function uses a set (weights) to store unique weights generated from the input string s. 
+The number of unique weights can be at most 26 * n (assuming lowercase English alphabets), but in practice, 
+it's limited by the number of distinct consecutive characters in the string s.
+The space complexity of storing these weights in the set would be proportional to the number of 
+unique weights generated, which could go up to O(n).
